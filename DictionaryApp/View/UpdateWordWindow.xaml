@@ -1,0 +1,36 @@
+﻿<Window x:Class="DictionaryApp.UpdateWordWindow"
+      xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+      xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+      xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006" 
+      xmlns:d="http://schemas.microsoft.com/expression/blend/2008" 
+      xmlns:local="clr-namespace:DictionaryApp"
+      mc:Ignorable="d" 
+      Title="UpdateWordWindow" Height="450" Width="800"  Background="#FFF7F7F7">
+
+    <Grid>
+        <TextBox x:Name="wordNameTxt" HorizontalAlignment="Left" Height="35" Margin="124,48,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="189" TextChanged="wordNameTxt_TextChanged"/>
+        <Label Content="Enter word name" HorizontalAlignment="Left" Margin="147,25,0,0" VerticalAlignment="Top" Height="35" Width="126" FontFamily="Courier New" FontWeight="Bold"/>
+        <Button x:Name="btnGetWord" Content="Get Word" HorizontalAlignment="Left" Margin="535,48,0,0" VerticalAlignment="Top" Width="94" Height="32" Click="Button_Click" FontSize="18" FontFamily="Courier New" FontWeight="Bold" Background="#FFB25254" Foreground="White"/>
+        <TextBox x:Name="descriptionTxt" HorizontalAlignment="Left" Height="59" Margin="124,170,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="189" TextChanged="descriptionTxt_TextChanged"/>
+        <Label Content="Description" HorizontalAlignment="Left" Margin="28,186,0,0" VerticalAlignment="Top" FontFamily="Courier New" FontWeight="Bold"/>
+        <Label Content="Category" HorizontalAlignment="Left" Margin="40,256,0,0" VerticalAlignment="Top" FontFamily="Courier New" FontWeight="Bold"/>
+        <TextBox x:Name="newNameTxt" HorizontalAlignment="Left" Height="35" Margin="124,104,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="189" TextChanged="wordTxt_TextChanged"/>
+        <Label Content="Name&#xD;&#xA;" HorizontalAlignment="Left" Margin="78,109,0,0" VerticalAlignment="Top" FontFamily="Courier New" FontWeight="Bold"/>
+        <CheckBox x:Name="ckcBox" HorizontalAlignment="Left" Margin="124,326,0,0" VerticalAlignment="Top" Height="24" Width="166" Checked="ckcBox_Checked"/>
+        <Label Content="New category" HorizontalAlignment="Left" Margin="15,324,0,0" VerticalAlignment="Top" FontFamily="Courier New" FontWeight="Bold"/>
+        <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="400,48,0,0" VerticalAlignment="Top" Width="87" Height="32" Click="btnBack_Click" FontSize="18" FontFamily="Courier New" FontWeight="Bold" Background="#FFB25254" Foreground="White"/>
+        <TextBox x:Name="newCategoryTxt" HorizontalAlignment="Left" Height="31" Margin="158,319,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="189" TextChanged="newCategoryTxt_TextChanged"/>
+        <Button x:Name="btnSaveWord" Content="Save Word" HorizontalAlignment="Left" Margin="666,48,0,0" VerticalAlignment="Top" Width="101" Height="32" Click="btnSaveWord_Click" FontSize="18" FontFamily="Courier New" FontWeight="Bold" Background="#FFB25254" Foreground="White"/>
+        <ComboBox x:Name="cboCategory" HorizontalAlignment="Left" Margin="124,256,0,0" VerticalAlignment="Top" Width="217" Height="36"  ItemsSource="{Binding BoundCategories, Mode=TwoWay}"/>
+
+
+        <Button Height="23" HorizontalAlignment="Left"
+        Margin="510,0,0,273" Name="btnLoad" VerticalAlignment="Bottom"
+        Width="75" Click="btnLoad_Click" FontSize="18" FontFamily="Courier New" FontWeight="Bold" Background="#FFB25254" Foreground="White">_Load</Button>
+
+
+        <Image Margin="456,160,115,55" Name="imgPhoto"
+        Stretch="Fill"/>
+
+    </Grid>
+</Window>

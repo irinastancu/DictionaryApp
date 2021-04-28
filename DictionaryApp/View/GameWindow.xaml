@@ -1,0 +1,26 @@
+﻿<Window x:Class="DictionaryApp.View.GameWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DictionaryApp.View"
+        mc:Ignorable="d"
+        Title="GameWindow" Height="450" Width="800"  Background="#FFF7F7F7">
+
+    <Grid Name="myCanvas">
+
+        <Image Margin="490,117,81,98" Name="imgPhoto"
+        Stretch="Fill" />
+
+        <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="40,357,0,0" VerticalAlignment="Top" Width="116" Height="37" FontSize="18" Click="btnBack_Click_1" FontFamily="Courier New" FontWeight="Bold" Background="#FFB25254" Foreground="White" />
+        <Label x:Name="lbl" Content="Guess the word by the following content" HorizontalAlignment="Left" Margin="40,38,0,0" VerticalAlignment="Top" FontSize="18" Width="428" FontFamily="Courier New" FontWeight="Bold"/>
+        <Button x:Name="btnGuess" Content="Guess" HorizontalAlignment="Left" Margin="638,357,0,0" VerticalAlignment="Top" Width="116" Height="37" FontSize="18" Click="btnGuess_Click" FontFamily="Courier New" FontWeight="Bold" Background="#FFB25254" Foreground="White"/>
+
+        <Label x:Name="lblScore" FontSize="18" Margin="628,10,36,369" FontFamily="Courier New" FontWeight="Bold">Score: 0/5</Label>
+        <Label x:Name="lblInfo" Content=""  HorizontalAlignment="Left" Margin="501,55,0,0" VerticalAlignment="Top" Width="281" Height="33" FontSize="18" Foreground="#FFF02020" FontFamily="Courier New" FontWeight="Bold"/>
+        <Label Content="Write your guess down below" HorizontalAlignment="Left" Margin="40,172,0,0" VerticalAlignment="Top" FontSize="18" Width="246" FontFamily="Courier New" FontWeight="Bold"/>
+        <TextBox x:Name="txtGuess" HorizontalAlignment="Left" Height="70" Margin="40,211,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="331"/>
+        <Label x:Name="lblContent" Content="" HorizontalAlignment="Left" Margin="40,77,0,0" VerticalAlignment="Top" Height="70" Width="331"/>
+
+    </Grid>
+</Window>

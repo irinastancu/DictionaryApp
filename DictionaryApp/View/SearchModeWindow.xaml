@@ -1,0 +1,18 @@
+﻿<Window x:Class="DictionaryApp.View.SearchModeWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+        xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+        xmlns:local="clr-namespace:DictionaryApp.View"
+        mc:Ignorable="d"
+        Title="SearchModeWindow" Height="450" Width="800"  Background="#FFF7F7F7">
+    <Grid>
+        <Button x:Name="btnBack" Content="Back" HorizontalAlignment="Left" Margin="46,354,0,0" VerticalAlignment="Top" Width="116" Height="37" Click="btnBack_Click" FontSize="18" FontFamily="Courier New" FontWeight="Bold" Background="#FFB25254" Foreground="White"/>
+        <TextBox x:Name="txtSearchBar" HorizontalAlignment="Left" Height="44" Margin="189,121,0,0" TextWrapping="Wrap" VerticalAlignment="Top" Width="320" FontSize="18" TextChanged="txtSearchBar_TextChanged"/>
+        <ListBox x:Name="listPredictiveText" HorizontalAlignment="Left" Height="104" Margin="189,165,0,0" VerticalAlignment="Top" Width="320" SelectionChanged="listPredictiveText_SelectionChanged"/>
+        <Label Content="Search word" HorizontalAlignment="Left" Margin="189,88,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Courier New" FontWeight="Bold" Width="181"/>
+        <Label Content="Filter by category" HorizontalAlignment="Left" Margin="509,88,0,0" VerticalAlignment="Top" FontSize="20" FontFamily="Courier New" FontWeight="Bold" Width="234"/>
+        <ComboBox x:Name="cboCategory" HorizontalAlignment="Left" Margin="509,121,0,0" VerticalAlignment="Top" Width="229" Height="44"  ItemsSource="{Binding BoundCategories, Mode=TwoWay}" />
+
+    </Grid>
+</Window>

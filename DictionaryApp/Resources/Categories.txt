@@ -1,0 +1,4 @@
+﻿Food
+Flowers
+Animals
+Objects
